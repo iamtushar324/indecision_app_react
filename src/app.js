@@ -37,7 +37,9 @@ function rerender() {
                 <input id="input"></input>
                 <button type="submit">Add</button>
                 <button onClick={rem}>Remove All</button>
-                <button onClick={ran}>What should I do </button>
+                <button disabled={lists.length == 0 ? true : false} onClick={ran}>What should I do </button>
+                <button onClick={to}>{Toggle}</button>
+                {bool ? "It is ON " : "Its OFF"}
 
             </form>
 
@@ -70,6 +72,22 @@ function rem() {
     lists = [];
     count = 0;
     // rerender()
+}
+
+
+
+let bool = true;
+let Toggle = "ON";
+function to() {
+
+    if (bool) {
+        bool = false;
+        Toggle = "OFF";
+    }
+    else {
+        bool = true;
+        Toggle = "ON";
+    }
 }
 
 

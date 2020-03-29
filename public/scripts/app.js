@@ -54,9 +54,15 @@ function rerender() {
             ),
             React.createElement(
                 "button",
-                { onClick: ran },
+                { disabled: lists.length == 0 ? true : false, onClick: ran },
                 "What should I do "
-            )
+            ),
+            React.createElement(
+                "button",
+                { onClick: to },
+                Toggle
+            ),
+            bool ? "It is ON " : "Its OFF"
         ),
         todo
     );
@@ -77,6 +83,19 @@ function rem() {
     lists = [];
     count = 0;
     // rerender()
+}
+
+var bool = true;
+var Toggle = "ON";
+function to() {
+
+    if (bool) {
+        bool = false;
+        Toggle = "OFF";
+    } else {
+        bool = true;
+        Toggle = "ON";
+    }
 }
 
 var root = document.getElementById('root');
