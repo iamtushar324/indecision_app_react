@@ -1,1 +1,1 @@
-Check this app here :- https://iamtushar324.github.io/indecision_app_react/
+Check this app here :- https://iamtushar324.github.io/indecision_app_react/public
